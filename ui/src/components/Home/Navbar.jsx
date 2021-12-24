@@ -93,9 +93,11 @@ const Item = styled.span`
   transition: all 0.2s ease;
 
   &:hover {
-    color: black;
+    color: ${props=>props.name === "create" && "#39B290" || "black"};
+    font-size: ${props=>props.name === "create" && "22px" || "20px"};
   }
 `;
+
 const IconContainer = styled.div`
   display: flex;
   align-items: center;
@@ -133,10 +135,10 @@ const Navbar = () => {
         </Middle>
         <Right>
           <ItemContainer>
-            <Item>Explore</Item>
-            <Item>Stats</Item>
-            <Item>Resources</Item>
-            <Item>Create</Item>
+            <Item name="explore">Explore</Item>
+            <Item name="stats">Stats</Item>
+            <Item name="resources">Resources</Item>
+            <Item name="create">Create</Item>
           </ItemContainer>
           <IconContainer>
             <Icon>
