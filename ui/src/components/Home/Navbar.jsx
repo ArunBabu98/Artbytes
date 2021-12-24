@@ -11,6 +11,7 @@ const Container = styled.div`
   right: 0px;
   top: 0px;
   box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
+  overflow: hidden;
 `;
 
 const Wrapper = styled.div`
