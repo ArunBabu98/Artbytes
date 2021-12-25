@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 
 const Container = styled.div`
   margin-top: 9vh;
@@ -94,7 +94,7 @@ const LearnIcon = styled.div`
   background-color: #39b290;
   border-radius: 50%;
   color: white;
-  transform:scale(0.8)
+  transform: scale(0.8);
 `;
 const LearnText = styled.div`
   margin-left: 10px;
@@ -107,6 +107,29 @@ const LearnText = styled.div`
 const Right = styled.div`
   flex: 1;
 `;
+
+const CardContainer = styled.div`
+  width: 500px;
+  height: 500px;
+  border-radius: 20px;
+  margin-left: 80px;
+  margin-top: 50px;
+  box-shadow: 3px 3px 7px gray;
+`;
+
+const Picture = styled.div``;
+
+const DescContainer = styled.div``;
+
+const Propic = styled.div``;
+
+const Description = styled.div``;
+
+const DescTitle = styled.div``;
+
+const Username = styled.div``;
+
+const InfoIncon = styled.div``;
 
 export const Front = () => {
   return (
@@ -127,12 +150,24 @@ export const Front = () => {
           </MainTextContainer>
           <LearnMoreContainer>
             <LearnIcon>
-              <PlayArrowIcon/>
+              <PlayArrowIcon />
             </LearnIcon>
             <LearnText>Learn more about ArtBytes</LearnText>
           </LearnMoreContainer>
         </Left>
-        <Right>right</Right>
+        <Right>
+          <CardContainer>
+            <Picture></Picture>'
+            <DescContainer>
+              <Propic></Propic>
+              <Description>
+                <DescTitle></DescTitle>
+                <Username></Username>
+              </Description>
+              <InfoIncon></InfoIncon>
+            </DescContainer>
+          </CardContainer>
+        </Right>
       </Wrapper>
     </Container>
   );
