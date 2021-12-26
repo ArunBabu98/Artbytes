@@ -6,12 +6,13 @@ import SearchIcon from '@mui/icons-material/Search';
 
 const Container = styled.div`
   height: 9vh;
-  position: absolute;
+  position: fixed;
   left: 0px;
   right: 0px;
   top: 0px;
   box-shadow: 0 10px 10px rgb(0 0 0 / 0.2);
   overflow: hidden;
+  background-color: white;
 `;
 
 const Wrapper = styled.div`
