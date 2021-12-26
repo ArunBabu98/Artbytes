@@ -1,10 +1,15 @@
 import React from "react";
 import styled from "styled-components";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
+import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
+import pic from '../../images/pic.webp'
 
 const Container = styled.div`
   margin-top: 9vh;
   height: 80vh;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.8)), url("${props=>props.image}");
+  background-repeat: no-repeat;
+  background-size: 100%;
 `;
 
 const Wrapper = styled.div`
@@ -115,25 +120,81 @@ const CardContainer = styled.div`
   margin-left: 80px;
   margin-top: 50px;
   box-shadow: 3px 3px 7px gray;
+  transition: all 0.2s ease-in;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 10px 10px 14px gray;
+  }
 `;
 
-const Picture = styled.div``;
+const PictureContainer = styled.div`
+  height: 80%;
+  background-color: red;
+`;
 
-const DescContainer = styled.div``;
+const Picture = styled.img`
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  object-fit: cover;
+`;
 
-const Propic = styled.div``;
+const DescContainer = styled.div`
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+`;
 
-const Description = styled.div``;
+const LeftSide = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 
-const DescTitle = styled.div``;
+const PropicContainer = styled.div`
+  margin: 0px 20px;
+  width:50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #39B290;
+`;
 
-const Username = styled.div``;
+const Propic = styled.img`
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+`;
 
-const InfoIncon = styled.div``;
+const Description = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const DescTitle = styled.span`
+  font-size: 24px;
+  font-weight: 600;
+`;
+
+const Username = styled.span`
+  font-size: 16px;
+  font-weight: 700;
+  color: #39B290;
+`;
+
+const InfoIncon = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  color: gray;
+`;
 
 export const Front = () => {
   return (
-    <Container>
+    <Container image={pic}>
       <Wrapper>
         <Left>
           <MainTextContainer>
@@ -157,14 +218,22 @@ export const Front = () => {
         </Left>
         <Right>
           <CardContainer>
-            <Picture></Picture>'
+            <PictureContainer>
+              <Picture src={pic} />
+            </PictureContainer>
             <DescContainer>
-              <Propic></Propic>
-              <Description>
-                <DescTitle></DescTitle>
-                <Username></Username>
-              </Description>
-              <InfoIncon></InfoIncon>
+              <LeftSide>
+                <PropicContainer>
+                  <Propic src="assets/propic.jpeg"/>
+                </PropicContainer>
+                <Description>
+                  <DescTitle>Portrait of a dream</DescTitle>
+                  <Username>@john_x</Username>
+                </Description>
+              </LeftSide>
+              <InfoIncon>
+                <InfoOutlinedIcon/>
+              </InfoIncon>
             </DescContainer>
           </CardContainer>
         </Right>
