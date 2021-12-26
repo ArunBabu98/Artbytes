@@ -1,4 +1,5 @@
 import React from 'react'
+import Footer from '../components/Home/Footer';
 import { Front } from '../components/Home/Front';
 import Navbar from '../components/Home/Navbar';
 import Notable from '../components/Home/Notable';
@@ -11,6 +12,7 @@ const Home = () => {
            <Front/>
            <Notable/>
            <TopCollections/>
+           <Footer/>
        </div>
     )
 }
