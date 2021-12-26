@@ -1,8 +1,9 @@
-import Connect from "./pages/Connect";
+// import Connect from "./pages/Connect";
+import Profile from "./pages/Profile";
 // import Home from "./pages/Home";
 
 const App = () => {
-  return <Connect/>;
+  return <Profile/>;
 };
 
 export default App;

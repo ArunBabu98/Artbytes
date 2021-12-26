@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Footer from "../components/Home/Footer";
 import Navbar from "../components/Home/Navbar";
 import meta from '../images/metamask.png';
+import coinbase from '../images/coinbase.png';
 
 const Container = styled.div`
 `;
@@ -34,7 +35,7 @@ const WalletContainer = styled.div`
 `;
 
 const Card = styled.div`
-    height: 19%;
+    height: 50%;
     display: flex;
     align-items: center;
     border-bottom: 1px solid lightgray;
@@ -78,16 +79,8 @@ const Connect = () => {
                   <Name>Metamask</Name>
               </Card>
               <Card>
-                  <Logo></Logo>
-                  <Name>Metamask</Name>
-              </Card>
-              <Card>
-                  <Logo></Logo>
-                  <Name>Metamask</Name>
-              </Card>
-              <Card>
-                  <Logo></Logo>
-                  <Name>Metamask</Name>
+                  <Logo image={coinbase}></Logo>
+                  <Name>Coinbase Wallet</Name>
               </Card>
           </WalletContainer>
         </Contents>
